@@ -6,7 +6,6 @@ pipeline {
     stages{
         stage('TEST'){
             steps{
-            	sh 'printenv'
                 bat 'mvn test'
             }
         }
