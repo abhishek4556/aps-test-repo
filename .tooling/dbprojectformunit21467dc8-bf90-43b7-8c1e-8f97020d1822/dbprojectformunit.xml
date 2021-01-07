@@ -4,12 +4,10 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="65a7483b-a2a2-4f2d-83ae-211629fea0e0" >
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="17f0a6a5-3b79-454f-bf2f-72b1e8eaaab1" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="testFlow" doc:id="b3dec1ac-0163-4a40-a8be-d8c3250b52fb" >
-		<http:listener doc:name="Listener" doc:id="5272cc43-a5f2-4448-b010-0abaeca7187f" config-ref="HTTP_Listener_config" path="/test"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="e88cbbf2-e6ef-41bd-860d-7496d05e3e89" />
-		<logger level="INFO" doc:name="Logger" doc:id="6d22e09f-73a7-47ea-9f12-cb62fd51efc7" />
+	<flow name="dbprojectformunitFlow" doc:id="453bc31d-6424-4a2c-919d-abb690a1884d" >
+		<http:listener doc:name="Listener" doc:id="d4163abd-509a-421c-9a8c-640d828be9dc" />
 	</flow>
 </mule>
